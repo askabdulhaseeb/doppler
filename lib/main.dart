@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Doppler',
+      darkTheme: ThemeData.light(),
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.black,
+        colorScheme: ColorScheme.dark(),
         primarySwatch: Colors.blue,
       ),
       home: const SplashScreen(),
