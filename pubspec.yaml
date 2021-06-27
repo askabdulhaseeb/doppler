@@ -12,9 +12,16 @@ dependencies:
   lint: ^1.5.3
   font_awesome_flutter: ^9.1.0
 
+  google_sign_in: ^5.0.4
+
   firebase_auth: ^1.4.1
   firebase_core: ^1.3.0
+  cloud_firestore: ^2.2.2
   firebase_storage: ^8.1.3
+
+  shared_preferences: ^2.0.6
+
+  fluttertoast: ^8.0.7
 
   cupertino_icons: ^1.0.2
 
