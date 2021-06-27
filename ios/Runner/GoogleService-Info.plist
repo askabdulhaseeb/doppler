@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>954880729280-370u7gljbp8ekm6k3q53mvclv8d4pcg9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.954880729280-370u7gljbp8ekm6k3q53mvclv8d4pcg9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC2HZcKs3TC5noiEEIpKYnkhAWqMm51tDc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>954880729280</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.doppler</string>
+	<key>PROJECT_ID</key>
+	<string>doppler-5d9dc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>doppler-5d9dc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:954880729280:ios:9a1bd96c7fad4df3528d25</string>
+</dict>
+</plist>
