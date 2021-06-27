@@ -1,5 +1,7 @@
 import 'package:doppler/database/app_user_methods.dart';
 import 'package:doppler/database/auth_mathods.dart';
+import 'package:doppler/screens/widgets/show_loading.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SignupButton extends StatelessWidget {
@@ -24,15 +26,20 @@ class SignupButton extends StatelessWidget {
     return InkWell(
       borderRadius: BorderRadius.circular(30),
       // radius: 30,
-      onTap: () {
+      onTap: () async {
         if (globalKey.currentState!.validate()) {
           if (password.text.trim() == confirmPassword.text.trim()) {
-            AuthMethods().signupWithEmailAndPassword(
+            showLoadingDislog(context);
+            final User? _user = await AuthMethods().signupWithEmailAndPassword(
               name: name.text.trim(),
               email: email.text.trim(),
               password: password.text.trim(),
               designation: designation,
             );
+            if (_user != null) {
+              Navigator.of(context).pop();
+              Navigator.of(context).pop();
+            }
           }
         }
       },
