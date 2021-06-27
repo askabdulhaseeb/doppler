@@ -1,10 +1,11 @@
-import 'package:doppler/screens/auth/loginScreen/sheet/forget_password.dart';
-import 'package:doppler/screens/auth/loginScreen/sheet/goto_signup_screen_line.dart';
-import 'package:doppler/screens/auth/loginScreen/sheet/login_button.dart';
-import 'package:doppler/screens/auth/loginScreen/sheet/login_with_google.dart';
-import 'package:doppler/screens/auth/widgets/valid_email_textformfield.dart';
-import 'package:doppler/screens/auth/widgets/valid_password_textformfield.dart';
+import 'package:doppler/screens/auth/widgets/valide_email_text_form_field.dart';
+import 'package:doppler/screens/auth/widgets/valide_password_text_form_field.dart';
 import 'package:flutter/material.dart';
+
+import 'forget_password.dart';
+import 'goto_signup_screen_line.dart';
+import 'login_button.dart';
+import 'login_with_google.dart';
 
 class LoginSheet extends StatefulWidget {
   const LoginSheet({Key? key}) : super(key: key);
@@ -40,8 +41,8 @@ class _LoginSheetState extends State<LoginSheet> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                ValidEmailTextFormField(email: _email),
-                ValidPasswordTextFormField(password: _password),
+                ValideEmailTextFormField(email: _email),
+                ValidePasswordTextFormField(password: _password),
                 const ForgetPassword(),
                 const LoginButton(),
               ],
