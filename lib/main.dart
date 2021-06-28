@@ -1,3 +1,4 @@
+import 'package:doppler/screens/user/userHomeScreen/user_home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'screens/admin/homeScreen/home_screen.dart';
@@ -38,12 +39,15 @@ class MyApp extends StatelessWidget {
         disabledColor: Colors.grey,
         errorColor: Colors.red,
       ),
-      home: const AdminHomeScreen(),
+      home: const UserHomeScreen(),
       routes: {
         SplashScreen.routeName: (_) => const SplashScreen(),
         LoginScreen.routeName: (_) => const LoginScreen(),
         SignupScreen.routeName: (_) => const SignupScreen(),
         AdminHomeScreen.routeName: (_) => const AdminHomeScreen(),
+
+        // users
+        UserHomeScreen.roouteName: (_) => const UserHomeScreen(),
       },
     );
   }

@@ -44,7 +44,7 @@ class AdminDrawer extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.comment, color: Colors.black),
               title: const Text(
-                'Manage Quries',
+                'Manage Queries',
                 style: _textStyle,
               ),
               onTap: () {},
