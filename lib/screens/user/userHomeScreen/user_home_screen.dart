@@ -1,4 +1,5 @@
 import 'package:doppler/configs/app_image.dart';
+import 'package:doppler/screens/auth/loginScreen/login_screen.dart';
 import 'package:doppler/screens/user/scanXrayScreen/scan_xray_screen.dart';
 import 'package:doppler/screens/user/uploadXRayScreen/upload_xray_screen.dart';
 import 'package:flutter/material.dart';
@@ -150,6 +151,14 @@ class UserHomeHeader extends StatelessWidget {
               ),
               Text('''How's you today?'''),
             ],
+          ),
+          const Spacer(),
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                  LoginScreen.routeName, (route) => false);
+            },
+            icon: const Icon(Icons.logout),
           ),
         ],
       ),

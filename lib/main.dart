@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         disabledColor: Colors.grey,
         errorColor: Colors.red,
       ),
-      home: const UserHomeScreen(),
+      home: const SplashScreen(),
       routes: {
         SplashScreen.routeName: (_) => const SplashScreen(),
         LoginScreen.routeName: (_) => const LoginScreen(),

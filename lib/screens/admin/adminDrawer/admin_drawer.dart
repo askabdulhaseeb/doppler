@@ -1,4 +1,5 @@
 import 'package:doppler/configs/app_image.dart';
+import 'package:doppler/screens/auth/loginScreen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class AdminDrawer extends StatelessWidget {
@@ -64,7 +65,12 @@ class AdminDrawer extends StatelessWidget {
                 'Logout',
                 style: _textStyle,
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                  LoginScreen.routeName,
+                  (route) => false,
+                );
+              },
             ),
             const SizedBox(height: 20),
           ],

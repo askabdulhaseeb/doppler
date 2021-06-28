@@ -1,4 +1,6 @@
+import 'package:doppler/models/app_user.dart';
 import 'package:doppler/screens/admin/homeScreen/home_screen.dart';
+import 'package:doppler/screens/user/userHomeScreen/user_home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../../../database/app_user_methods.dart';
@@ -30,10 +32,20 @@ class LoginButton extends StatelessWidget {
           );
           Navigator.of(context).pop();
           if (_user != null) {
-            Navigator.of(context).pushNamedAndRemoveUntil(
-              AdminHomeScreen.routeName,
-              (route) => false,
-            );
+            final docs = await AppUserFirebaseMethods()
+                .getUserInfofromFirebase(_user.uid);
+            AppUser appUser = AppUser.fromDocument(docs);
+            if (appUser.designation == 'admin') {
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                AdminHomeScreen.routeName,
+                (route) => false,
+              );
+            } else {
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                UserHomeScreen.roouteName,
+                (route) => false,
+              );
+            }
           }
         }
       },
