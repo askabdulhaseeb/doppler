@@ -1,5 +1,6 @@
 import 'package:doppler/configs/app_image.dart';
 import 'package:doppler/screens/user/scanXrayScreen/scan_xray_screen.dart';
+import 'package:doppler/screens/user/uploadXRayScreen/upload_xray_screen.dart';
 import 'package:flutter/material.dart';
 
 class UserHomeScreen extends StatelessWidget {
@@ -28,7 +29,9 @@ class UserHomeScreen extends StatelessWidget {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed(UploadXRayScreen.routeName);
+                  },
                   child: const UserHomeScreenIconsWidget(
                     icon: Icons.upload_file,
                     title: 'Upload XRay',

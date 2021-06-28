@@ -1,19 +1,24 @@
 import 'dart:io';
-import 'package:image_picker/image_picker.dart';
-
 import 'package:doppler/screens/user/scanXrayScreen/upload_image_button.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
-class ScanXRayScreen extends StatefulWidget {
-  static const routeNAme = '/ScanXRayScreen';
-  const ScanXRayScreen({Key? key}) : super(key: key);
+class UploadXRayScreen extends StatefulWidget {
+  static const routeName = '/UploadXRayScreen';
+  const UploadXRayScreen({Key? key}) : super(key: key);
   @override
-  _ScanXRayScreenState createState() => _ScanXRayScreenState();
+  _UploadXRayScreenState createState() => _UploadXRayScreenState();
 }
 
-class _ScanXRayScreenState extends State<ScanXRayScreen> {
+class _UploadXRayScreenState extends State<UploadXRayScreen> {
   PickedFile? _image;
   File? file;
+  @override
+  void initState() {
+    _imgFromGallery();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +31,7 @@ class _ScanXRayScreenState extends State<ScanXRayScreen> {
           const SizedBox(height: 40),
           GestureDetector(
             onTap: () {
-              _imgFromCamera();
+              _imgFromGallery();
             },
             child: Container(
               alignment: Alignment.center,
@@ -68,10 +73,10 @@ class _ScanXRayScreenState extends State<ScanXRayScreen> {
     );
   }
 
-  _imgFromCamera() async {
+  _imgFromGallery() async {
     final ImagePicker _imagePicker = ImagePicker();
     final PickedFile? _file = await _imagePicker.getImage(
-      source: ImageSource.camera,
+      source: ImageSource.gallery,
       imageQuality: 50,
     );
     setState(() {
