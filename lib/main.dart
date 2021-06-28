@@ -1,3 +1,4 @@
+import 'package:doppler/screens/user/scanXrayScreen/scan_xray_screen.dart';
 import 'package:doppler/screens/user/userHomeScreen/user_home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
 
         // users
         UserHomeScreen.roouteName: (_) => const UserHomeScreen(),
+        ScanXRayScreen.routeNAme: (_) => const ScanXRayScreen(),
       },
     );
   }

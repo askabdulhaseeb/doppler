@@ -1,4 +1,5 @@
 import 'package:doppler/configs/app_image.dart';
+import 'package:doppler/screens/user/scanXrayScreen/scan_xray_screen.dart';
 import 'package:flutter/material.dart';
 
 class UserHomeScreen extends StatelessWidget {
@@ -18,7 +19,9 @@ class UserHomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed(ScanXRayScreen.routeNAme);
+                  },
                   child: const UserHomeScreenIconsWidget(
                     icon: Icons.camera_alt_outlined,
                     title: 'Scan XRay',
