@@ -1,9 +1,10 @@
+import 'package:doppler/screens/admin/homeScreen/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../../../database/app_user_methods.dart';
 import '../../../database/auth_mathods.dart';
+
 import '../../../screens/widgets/show_loading.dart';
-import '../../admin/homeScreen/home_screen.dart';
 
 class LoginButton extends StatelessWidget {
   final TextEditingController email;
