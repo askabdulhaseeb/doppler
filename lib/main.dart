@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'screens/admin/homeScreen/home_screen.dart';
 import 'screens/auth/loginScreen/login_screen.dart';
 import 'screens/auth/signupScreen/signup_screen.dart';
-import 'screens/homeScreen/home_screen.dart';
 import 'screens/splashScreen/splash_screen.dart';
 
 Future main() async {
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
         SplashScreen.routeName: (_) => const SplashScreen(),
         LoginScreen.routeName: (_) => const LoginScreen(),
         SignupScreen.routeName: (_) => const SignupScreen(),
-        HomeScreen.routeName: (_) => const HomeScreen(),
+        AdminHomeScreen.routeName: (_) => const AdminHomeScreen(),
       },
     );
   }

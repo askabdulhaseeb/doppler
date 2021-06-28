@@ -11,15 +11,16 @@ class GotoSignupScreenLine extends StatelessWidget {
       children: [
         const Text(
           '''Don't have account? ''',
-          style: TextStyle(color: Colors.black),
         ),
-        InkWell(
+        GestureDetector(
           onTap: () {
             Navigator.of(context).pushNamed(SignupScreen.routeName);
           },
-          child: const Text(
+          child: Text(
             ''' SignUp''',
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.w800),
+            style: TextStyle(
+                fontWeight: FontWeight.w800,
+                color: Theme.of(context).primaryColor),
           ),
         ),
       ],

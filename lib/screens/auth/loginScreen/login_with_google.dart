@@ -8,10 +8,10 @@ class LoginWithGoogle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+      margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        border: Border.all(color: Colors.blueGrey, width: 0.5),
+        border: Border.all(color: Theme.of(context).primaryColor, width: 1.5),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -23,7 +23,6 @@ class LoginWithGoogle extends StatelessWidget {
           SizedBox(width: 6),
           Text(
             'Signin With Google',
-            style: TextStyle(color: Colors.blueGrey),
           ),
         ],
       ),

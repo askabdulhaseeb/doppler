@@ -9,10 +9,11 @@ class ForgetPassword extends StatelessWidget {
       onTap: () {},
       child: Container(
         margin: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         alignment: Alignment.centerRight,
         child: const Text(
           'Forget Password?',
-          style: TextStyle(color: Colors.blueGrey),
+          style: TextStyle(color: Colors.grey),
         ),
       ),
     );
